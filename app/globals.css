@@ -94,19 +94,18 @@ body {
   .project-card {
     position: relative;
     overflow: hidden;
+    transition: transform 0.3s ease, height 0.3s ease;
+  }
+  .project-card:hover {
+    transform: scale(1.05);
+    height: auto;
   }
   .project-card .text-content {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
+    max-height: 50px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
   }
   .project-card:hover .text-content {
-    opacity: 1;
+    max-height: 200px; /* Adjust based on your content size */
   }
 }
